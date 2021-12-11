@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> cube </title>
+        <script langaue="javascript">
+           
+           function cube()
+           {
+           var a,cube; 
+           a = parseInt(document.getElementById("first").value);
+           Cube = a * a * a;
+           document.getElementById("num1").innerHTML = "Cube of " + a + " is : " + Cube;
+           }
+        </script>
+    </head>
+    <body>
+        <table>
+            <input type="text" name="a" id="first" placeholder="enter a number"><br>
+            <button onclick="cube()">Submit</button>
+        </table>
+        <div id="num"></div>
+        <div id="num1"></div>
+    </body>
+</html>

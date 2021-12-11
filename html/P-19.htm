@@ -1,26 +1,42 @@
-<HTML>
-	<HEAD>
-		<TITLE>Assignment Operators</TITLE>
-	</HEAD>
-	<BODY>
-		<SCRIPT	="JavaScript">
-			var x=23;
-			var y=45;
-			var z=x;
-			
-			document.write("x = " + x + "<BR>");
-			document.write("Y = " + y + "<BR>");
-			document.write("z = x and z = " + x + "<BR>");
-			x += y;
-			document.write("x += y : " + (x) + "<BR>"); 
-			x -= y;
-			document.write("x -= y : " + (x) + "<BR>");
-			x *= y;
-			document.write("x *= y : " + (x) + "<BR>");
-			x /= y;
-			document.write("x /= y : " + (x) + "<BR>");
-			x %= y;
-			document.write("x %= y : " + (x) + "<BR>");
-		</SCRIPT> 
-	</BODY>
-</HTML>
+<html>
+
+<head>
+    <script>
+        var numOne, numTwo, x , temp;
+        function fun() {
+            numOne = parseInt(document.getElementById("one").value);
+            numTwo = parseInt(document.getElementById("two").value);
+            if (numOne && numTwo) {
+                temp = document.getElementById("x");
+                temp.style.display = "block";
+                x = numOne + numTwo;
+                document.getElementById("add").value = x;
+                x = numOne - numTwo;
+                document.getElementById("subtract").value = x;
+                x = numOne * numTwo;
+                document.getElementById("multiply").value = x;
+                x = numOne / numTwo;
+                document.getElementById("divide").value = x;
+				x = numOne % numTwo;
+                document.getElementById("modulo").value = x;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p id="input">Enter First Number: <input id="one">
+        <br /><br />
+        Enter Second Number: <input id="two">
+    </p>
+    <p><button onclick="fun()">Add, Subtract, Multiply, Divide,MODULO</button></p>
+    <p id="x" style="display:none;">
+        Addition Result = <input id="add"><br /><br />
+        Subtraction Result = <input id="subtract"><br /><br />
+        Multiplication Result = <input id="multiply"><br /><br />
+        Division Result = <input id="divide"><br /><br />
+		MODULO Result = <input id="modulo"></p>
+</body>
+
+</html>
